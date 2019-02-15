@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>A1 Q7 (7745112)</title>
+    </head>
+    
+    <body>
+        <div align="left">Justin Huynh (7745112)</div>
+        <h4><center>CSI 3140 
+            <br> Assignment 1 Q7
+            </center>
+        </h4>
+        <p>7. Create a website registration form to obtain a user’s first name, last name and e-mail
+            address. In addition, include an optional survey question that asks the user’s year in
+            university (e.g., Not yet in university, Freshman, Sophomore, Junior, Senior, and
+            Graduate). Place the survey question in a details element that the user can expand to
+            see the question. Add a submit button and a reset button. [10 marks]
+        </p>
+        <h4> Website Registration Form </h4>
+        <form method = "post" action = "http://deitel.com">
+            <p><label>First Name:
+                <input name = "firstname" type = "text" size = "25" required>
+            </label></p>
+            
+            <p><label>Last Name:
+                <input name = "lastname" type = "text" size = "25" required>
+            </label></p>
+            
+            <p><label>Email:
+                <input name = "email" type = "email" size = "25" required>
+            </label></p>
+            
+            <details>
+                <summary>Optional Survey Question</summary>
+                <p>What is your University level?</p>
+                    <label>Not in University
+                        <input name = "year" type = "radio" value = "NA" checked>
+                    </label>
+                    <label>Freshman
+                        <input name = "year" type = "radio" value = "freshman">
+                    </label>
+                    <label>Sophomore
+                        <input name = "year" type = "radio" value = "sophomore">
+                    </label>
+                    <label>Junior
+                        <input name = "year" type = "radio" value = "junior">
+                    </label>
+                    <label>Senior
+                        <input name = "year" type = "radio" value = "senior">
+                    </label>
+                    <label>Graduate
+                        <input name = "year" type = "radio" value = "grad">
+                    </label>
+            </details>
+            
+            <p>
+                <input type = "submit" value = "Submit">
+                <input type = "reset" value = "Reset">
+            </p>
+        </form>
+    </body>
+
+</html>

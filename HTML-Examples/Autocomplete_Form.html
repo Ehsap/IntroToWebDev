@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>A1 Q6 (7745112)</title>
+    </head>
+    
+    <body>
+        <div align="left">Justin Huynh (7745112)</div>
+        <h4><center>CSI 3140 
+            <br> Assignment 1 Q6
+            </center>
+        </h4>
+        <p>6. Create an HTML5 document that contains an autocomplete form with a text input
+            element and an associated datalist element containing the days of the week. Provide a
+            submit button and a reset button. [10 marks] 
+        </p>
+        
+		<h4> Autocomplete Form for Days of Week </h4>
+        <form method = "post" autocomplete = "on">
+            <p><label>Day of the week:
+                <input type = "text" placeholder = "Select day of the week" list = "daysofweek">
+                <datalist id = "daysofweek">
+                    <option value = "Monday">
+                    <option value = "Tuesday">
+                    <option value = "Wednesday">
+                    <option value = "Thursday">
+                    <option value = "Friday">
+                    <option value = "Saturday">
+                    <option value = "Sunday">
+                </datalist>
+            </label></p>
+            
+            <p>
+                <input type = "submit" value = "Submit">
+                <input type = "reset" value = "Reset">
+            </p>
+        </form>
+    </body>
+
+</html>
