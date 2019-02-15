@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- By Justin Huynh -->
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title> A2 Q7 7745112 </title>
+		
+		<script>
+			function getSales(){
+			var stop; //Boolean flag used to stop loop asking for input
+			var prodQty = [0,0,0,0,0]; //Array that holds quantities sold for each product. Where prodQty[1] = product 1
+			var prodSales = [0,0,0,0,0]; //Array that holds total sales for each product. Where prodSales[1] = product 1 Sales
+			var prodNum; //Product number between 1 and 5 that user enters 
+			var strQtySold; //Quantity of products sold that user enters in string form
+			var qtySold; //Quantity of products in integer form
+			
+				while(prodNum!= -1){ //Where -1 is the input to exit the loop
+					var strProdNum = prompt("Enter a product number between 1-5. Enter '-1' to end.");
+						prodNum = parseInt(strProdNum); //Prompt function gets user input as a string, need to convert to integer
+					if (prodNum >= 1 && prodNum <=5 || prodNum == "-1"){
+						switch(prodNum){
+							case 1:
+								strQtySold = prompt("Enter quantity sold of product " + prodNum + ".");
+								qtySold = parseInt(strQtySold);
+								prodQty[0] += qtySold;
+								break;
+							case 2:
+								strQtySold = prompt("Enter quantity sold of product " + prodNum + ".");
+								qtySold = parseInt(strQtySold);
+								prodQty[1] += qtySold;
+								break;
+							case 3:
+								strQtySold = prompt("Enter quantity sold of product " + prodNum + ".");
+								qtySold = parseInt(strQtySold);
+								prodQty[2] += qtySold;
+								break;
+							case 4:
+								strQtySold = prompt("Enter quantity sold of product " + prodNum + ".");
+								qtySold = parseInt(strQtySold);
+								prodQty[3] += qtySold;
+								break;
+							case 5:
+								strQtySold = prompt("Enter quantity sold of product " + prodNum + ".");
+								qtySold = parseInt(strQtySold);
+								prodQty[4] += qtySold;
+								break;	
+							case -1:
+								prodSales[0] = prodQty[0]*2.98;
+								prodSales[1] = prodQty[1]*4.50;
+								prodSales[2] = prodQty[2]*9.98;
+								prodSales[3] = prodQty[3]*4.49;
+								prodSales[4] = prodQty[4]*6.87;
+								
+								//Enter quantity and sales numbers to the table
+								document.getElementById("qty1").innerHTML = (prodQty[0]);
+								document.getElementById("qty2").innerHTML = (prodQty[1]);
+								document.getElementById("qty3").innerHTML = (prodQty[2]);
+								document.getElementById("qty4").innerHTML = (prodQty[3]);
+								document.getElementById("qty5").innerHTML = (prodQty[4]);
+								
+								document.getElementById("sum1").innerHTML = ("$" + prodSales[0]);
+								document.getElementById("sum2").innerHTML = ("$" + prodSales[1]);
+								document.getElementById("sum3").innerHTML = ("$" + prodSales[2]);
+								document.getElementById("sum4").innerHTML = ("$" + prodSales[3]);
+								document.getElementById("sum5").innerHTML = ("$" + prodSales[4]);
+								
+								//Quantity Sold for ALL items
+								var qtySum = 0;
+								for (i = 0; i<prodQty.length; i++){
+									qtySum += prodQty[i];
+								}
+								//Total sales of ALL items
+								var saleSum = 0;
+								for (i = 0; i<prodSales.length; i++){
+									saleSum += prodSales[i];
+								}
+								//Entering the total quantity and sales into the footer of table
+								document.getElementById("footQty").innerHTML = (qtySum);
+								document.getElementById("footTotal").innerHTML = ("$" + saleSum);
+								break;
+						}
+					}else{
+						alert("Please try again. Enter a product number between 1 and 5");
+					}
+				}
+			}
+			
+			window.onload = getSales;
+		</script>
+	</head>
+	
+	<body>
+		<h1> Sales Calculator </h1>
+		<table border = "1">
+			<caption><strong> Table of Products and Total Sales</strong></caption>
+			
+			<thead>
+				<tr>
+					<th>Product Number</th>
+					<th>Product Price</th>
+					<th>Quantity Sold</th>
+					<th>Total Sales</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>$2.98</td>
+					<td id = qty1>0</td>
+					<td id = sum1>$0</td>
+				</tr>
+				
+				<tr>
+					<td>2</td>
+					<td>$4.50</td>
+					<td id = qty2>0</td>
+					<td id = sum2>$0</td>
+				</tr>
+				
+				<tr>
+					<td>3</td>
+					<td>$9.98</td>
+					<td id= qty3>0</td>
+					<td id = sum3>$0</td>
+				</tr>
+				
+				<tr>
+					<td>4</td>
+					<td>$4.49</td>
+					<td id = qty4>0</td>
+					<td id = sum4>$0</td>
+				</tr>
+				
+				<tr>
+					<td>5</td>
+					<td>$6.87</td>
+					<td id = qty5>0</td>
+					<td id = sum5>$0</td>
+				</tr>
+			</tbody>
+			
+			<tfoot>
+				<tr>
+					<th>All Sales</th>
+					<td>-</td>
+					<td id = footQty>-</td>
+					<td id = footTotal>-</td>
+				</tr>
+			</tfoot>
+			
+		</table>
+	</body>
+</html>
