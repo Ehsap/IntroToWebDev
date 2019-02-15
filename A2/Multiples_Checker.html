@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset = "utf-8">
+		<title> A2 Q5 7745112 </title>
+		
+		<script>
+		function checkMultiples() {
+			var intFirst = document.forms["multiplesForm"]["first"].value; //first number entered
+			var intSecond = document.forms["multiplesForm"]["second"].value; //second number entered
+			
+			if (intFirst%intSecond == 0)
+				document.getElementById("result").innerHTML = (intFirst + " is a multiple of " + intSecond);
+			else
+				document.getElementById("result").innerHTML = (intFirst + " is NOT a multiple of " + intSecond);
+				}
+		</script>
+		
+	</head>
+
+	<body>
+		<h1> Multiples Checker</h1>
+		<p> Enter two numbers and then press "check" to see if the first is a multiple of the second. </p>
+		
+		<form name = multiplesForm>
+			First integer: <input type = "number" name = first>
+			Second integer: <input type = "number" name = second>
+			<input type = "button" name = "butt1" value = "check" onclick = "checkMultiples(); return false;"> 
+		</form>
+		
+		<p id = "result"></p> <!-- Used to display whether a multiple exists -->
+	
+	</body>
+</html>
