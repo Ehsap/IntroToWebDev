@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>A1 Q4 (7745112)</title>
+    </head>
+    
+    <body>
+        <div align="left">Justin Huynh (7745112)</div>
+        <h4><center>CSI 3140 
+            <br> Assignment 1 Q4
+            </center>
+        </h4>
+        <p>4. A local university has asked you to create an HTML5 document that allows
+            prospective students to provide feedback about their campus visit. Your HTML5
+            document should contain a form with text fields for name and e-mail address. Provide
+            checkboxes that allow prospective students to indicate what they liked most about the
+            campus. The checkboxes should include: campus, students, location, atmosphere,
+            dorm rooms and sports. Also, provide radio buttons that ask the prospective students
+            how they became interested in the university. Options should include: friends,
+            television, Internet and other. In addition, provide a text area for additional
+            comments, a submit button and a reset button. Use post to send the information in the
+            form to http://www.deitel.com. [15 marks]
+        </p>
+        
+		<h4><right> Campus Visit Feedback </h4>
+        <form method = "post" action = "http://deitel.com">
+            <p><label>Name: 
+                <input name = "name" type = "text" size = "25">
+            </label></p>
+            
+            <p><label>Email: 
+                <input name = "email" type = "email" size = "25">
+            </label></p>
+            
+            <p>What did you like most about the campus?<br>
+                <label>Campus
+                    <input name = "likedmost" type = "checkbox" value = "campus">
+                </label>
+                
+                <label>Students
+                    <input name = "likedmost" type = "checkbox" value = "students">
+                </label>
+                
+                <label>Location
+                    <input name = "likedmost" type = "checkbox" value = "location">
+                </label>
+                
+                <label>Atmosphere
+                    <input name = "likedmost" type = "checkbox" value = "atmosphere">
+                </label>
+                
+                <label>Dorm Rooms
+                    <input name = "likedmost" type = "checkbox" value = "dorms">
+                </label>
+                
+                <label>Sports
+                    <input name = "likedmost" type = "checkbox" value = "sports">
+                </label>
+            </p>
+            
+            <p>How did you become interested in the University?<br>
+                <label>Friends
+                    <input name = "interested" type = "radio" value = "friends" checked>
+                </label>
+                
+                <label>Television
+                    <input name = "interested" type = "radio" value = "tv">
+                </label>
+                
+                <label>Internet
+                    <input name = "interested" type = "radio" value = "internet">
+                </label>
+                
+                <label>Other
+                    <input name = "interested" type = "radio" value = "other">
+                </label>
+            </p>
+            
+            <p><label>Comments:<br>
+                <textarea name = "comments" rows = "4" cols = "36">Enter comments here.</textarea>
+            </label></p>
+            
+            <p>
+                <input type = "submit" value = "Submit">
+                <input type = "reset" value = "Reset">
+            </p>
+        
+        </form>
+    </body>
+
+</html>

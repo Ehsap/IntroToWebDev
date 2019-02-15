@@ -1,0 +1,23 @@
+div {
+    display:block;
+    width:6em;
+    border-style:solid;
+    background-color:dimgrey;
+    text-align: center;
+}
+div:hover {
+    display:block;
+	width:6em;
+    border-style: dashed;
+    background-color:red;
+	text-align:center
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+a:hover {
+	color:white;
+}

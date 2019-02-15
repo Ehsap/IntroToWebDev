@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<!-- By Justin Huynh -->
+	<head>
+		<meta charset = "utf-8">
+		<title> A2 Q6 7745112 </title>
+		
+		<script>
+			function checkPalindrome(intNum){
+				var num = intNum;
+				//Split the number into an array of characters, then reverse the characters. If this reversal
+				//is the same as the original number, then it is a palindrome.
+				if (num == num.split("").reverse().join("")) 
+					document.getElementById("result").innerHTML = (num + " is a Palindrome.");
+				else
+					document.getElementById("result").innerHTML = (num + " is NOT a Palindrome.");
+			}
+			
+			function checkLength5(){ //Finds if entered value is 5 digits
+				var num = document.forms["aForm"]["entry"].value; //The entered value
+				if (num.toString().length == 5)
+					checkPalindrome(num);
+				else
+					alert("Please enter a 5-digit integer");
+			}
+		</script>
+	</head>
+	
+	<body>
+		<h1> Palindrome Checker </h1>
+		<p><strong> Enter a 5 digit integer and click on "check" to see if integer is a palindrome. </strong></p>
+		
+		<form name = aForm>
+			Enter number here: <input type = "number" name = "entry">
+			<input type = "button" name = "butt1" value = "Check" onclick ="checkLength5();">
+		</form>
+		
+		<p id = "result"></p> <!-- Used to display if integer is palindrome -->
+	</body>
+</html>
+			
+		
+	
+	
